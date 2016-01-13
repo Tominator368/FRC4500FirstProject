@@ -60,7 +60,7 @@ public class ExampleSubsystem extends Subsystem {
     
     public void drive(double x, double y, double twist)
     {
-    	drive.mecanumDrive_Cartesian(x, y, twist, 0);
+    	drive.mecanumDrive_Cartesian(x*RobotMap.MotorSpeed, y*RobotMap.MotorSpeed, twist*RobotMap.MotorSpeed, 0);
     }
     
 
