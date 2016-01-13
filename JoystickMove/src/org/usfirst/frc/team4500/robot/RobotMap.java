@@ -1,5 +1,6 @@
 package org.usfirst.frc.team4500.robot;
 
+import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.Talon;
 
 /**
@@ -25,4 +26,8 @@ public class RobotMap {
 	public static Talon BRightTalon = new Talon(3);
 	
 	public static int MoveForwardCounter = 0;
+	public static boolean isMoving = false;
+	
+	public static Solenoid leftClaw = new Solenoid(1);
+	public static Solenoid rightClaw = new Solenoid(2);
 }
