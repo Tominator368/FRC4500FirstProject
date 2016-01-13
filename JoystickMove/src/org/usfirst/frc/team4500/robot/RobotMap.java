@@ -1,5 +1,6 @@
 package org.usfirst.frc.team4500.robot;
 
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.Talon;
 
@@ -30,4 +31,6 @@ public class RobotMap {
 	
 	public static Solenoid leftClaw = new Solenoid(1);
 	public static Solenoid rightClaw = new Solenoid(2);
+	
+	public static DoubleSolenoid Claw = new DoubleSolenoid(0,1);
 }

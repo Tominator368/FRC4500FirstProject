@@ -40,7 +40,8 @@ public class OI {
 	
 	public static Joystick stick = new Joystick(1);
 	public static Button move = new JoystickButton(stick, 2);
-	public static Button clawControl = new JoystickButton(stick, 4);
+	public static Button clawOpen = new JoystickButton(stick, 4);
+	public static Button clawClose = new JoystickButton(stick, 6);
 	public static boolean finishedMove = false;
 	//OI.move.whenPressed(new ExampleCommand());
 }

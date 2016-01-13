@@ -1,15 +1,16 @@
 
 package org.usfirst.frc.team4500.robot;
 
-import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.command.Command;
-import edu.wpi.first.wpilibj.command.Scheduler;
-import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-
+import org.usfirst.frc.team4500.robot.commands.ClawCloseCommand;
 import org.usfirst.frc.team4500.robot.commands.ClawCommand;
 import org.usfirst.frc.team4500.robot.commands.ExampleCommand;
 import org.usfirst.frc.team4500.robot.commands.StopMovingCommand;
 import org.usfirst.frc.team4500.robot.subsystems.ExampleSubsystem;
+
+import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.command.Scheduler;
+import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -23,9 +24,10 @@ public class Robot extends IterativeRobot {
 	public static ExampleSubsystem exampleSubsystem;
 	public static OI oi;
 
-    Command autonomousCommand;
+    /*Command autonomousCommand;
     Command stopCommand;
     Command clawCommand;
+    Command clawCloseCommand = new ClawCloseCommand();*/
 
     /**
      * This function is run when the robot is first started up and should be
@@ -35,9 +37,9 @@ public class Robot extends IterativeRobot {
     	exampleSubsystem = new ExampleSubsystem();
 		oi = new OI();
         // instantiate the command used for the autonomous period
-        autonomousCommand = new ExampleCommand();
+        /*autonomousCommand = new ExampleCommand();
         stopCommand = new StopMovingCommand();
-        clawCommand = new ClawCommand();
+        clawCommand = new ClawCommand();*/
     }
 	
 	public void disabledPeriodic() {
@@ -61,7 +63,7 @@ public class Robot extends IterativeRobot {
         // teleop starts running. If you want the autonomous to 
         // continue until interrupted by another command, remove
         // this line or comment it out.
-        if (autonomousCommand != null) autonomousCommand.cancel();
+        //if (autonomousCommand != null) autonomousCommand.cancel();
     }
 
     /**
@@ -77,9 +79,10 @@ public class Robot extends IterativeRobot {
      */
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
-        OI.move.whileHeld(autonomousCommand);
-        OI.move.whenReleased(stopCommand);
-        OI.clawControl.whenPressed(clawCommand);
+        OI.move.whileHeld(new ExampleCommand());
+        OI.move.whenReleased(new StopMovingCommand());
+        OI.clawOpen.whenPressed(new ClawCommand());
+        OI.clawClose.whenPressed(new ClawCloseCommand());
         
     }
     

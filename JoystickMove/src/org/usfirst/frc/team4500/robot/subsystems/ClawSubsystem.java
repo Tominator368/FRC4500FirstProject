@@ -2,6 +2,7 @@ package org.usfirst.frc.team4500.robot.subsystems;
 
 import org.usfirst.frc.team4500.robot.RobotMap;
 
+import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
@@ -20,15 +21,17 @@ public class ClawSubsystem extends Subsystem {
     public static void Open()
 	{
     	
-    	RobotMap.leftClaw.set(true);
-    	RobotMap.rightClaw.set(true);
+    	//RobotMap.leftClaw.set(true);
+    	//RobotMap.rightClaw.set(true);
+    	RobotMap.Claw.set(Value.kForward);
 	}
     
     public static void Close()
 	{
     	
-    	RobotMap.leftClaw.set(false);
-    	RobotMap.rightClaw.set(false);
+    	//RobotMap.leftClaw.set(false);
+    	//RobotMap.rightClaw.set(false);
+    	RobotMap.Claw.set(Value.kReverse);
 	}
 }
 

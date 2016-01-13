@@ -7,9 +7,9 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class ClawCommand extends Command {
+public class ClawCloseCommand extends Command {
 
-    public ClawCommand() {
+    public ClawCloseCommand() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     }
@@ -20,7 +20,7 @@ public class ClawCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	ClawSubsystem.Open();
+    	ClawSubsystem.Close();
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -30,7 +30,6 @@ public class ClawCommand extends Command {
 
     // Called once after isFinished returns true
     protected void end() {
-    	//ClawSubsystem.Close();
     }
 
     // Called when another command which requires one or more of the same
