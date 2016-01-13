@@ -21,10 +21,8 @@ public class RobotMap {
     // public static int rangefinderPort = 1;
     // public static int rangefinderModule = 1;
 	
-	public static Talon FLeftTalon = new Talon(0);
-	public static Talon FRightTalon = new Talon(1);
-	public static Talon BLeftTalon = new Talon(2);
-	public static Talon BRightTalon = new Talon(3);
+	//public static Talon FLeftTalon = new Talon(0);
+	public static final int fLeftTalon = 0, fRightTalon = 1, bLeftTalon = 2, bRightTalon = 3;
 	
 	public static int MoveForwardCounter = 0;
 	public static boolean isMoving = false;
@@ -33,4 +31,6 @@ public class RobotMap {
 	public static Solenoid rightClaw = new Solenoid(2);
 	
 	public static DoubleSolenoid Claw = new DoubleSolenoid(0,1);
+	
+	public static double MotorSpeed = 0.5;
 }

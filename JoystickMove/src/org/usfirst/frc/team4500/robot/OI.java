@@ -43,6 +43,20 @@ public class OI {
 	public static Button clawOpen = new JoystickButton(stick, 4);
 	public static Button clawClose = new JoystickButton(stick, 6);
 	public static boolean finishedMove = false;
+	
+	public static double getJoystickX()
+	{
+		return stick.getX();
+	}
+	public static double getJoystickY()
+	{
+		return stick.getY();
+	}
+	
+	public static double getJoystickTwist()
+	{
+		return stick.getTwist();
+	}
 	//OI.move.whenPressed(new ExampleCommand());
 }
 

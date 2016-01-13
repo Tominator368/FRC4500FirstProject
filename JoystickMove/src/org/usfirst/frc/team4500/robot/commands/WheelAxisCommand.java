@@ -1,17 +1,16 @@
 package org.usfirst.frc.team4500.robot.commands;
 
+import org.usfirst.frc.team4500.robot.OI;
 import org.usfirst.frc.team4500.robot.Robot;
-import org.usfirst.frc.team4500.robot.RobotMap;
-import org.usfirst.frc.team4500.robot.subsystems.ExampleSubsystem;
 
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
  *
  */
-public class StopMovingCommand extends Command {
+public class WheelAxisCommand extends Command {
 
-    public StopMovingCommand() {
+    public WheelAxisCommand() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     }
@@ -22,8 +21,7 @@ public class StopMovingCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	RobotMap.isMoving = false;
-    	Robot.exampleSubsystem.Stop();
+    	Robot.exampleSubsystem.drive(OI.getJoystickX(), OI.getJoystickY(), OI.getJoystickTwist());
     }
 
     // Make this return true when this Command no longer needs to run execute()
