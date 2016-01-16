@@ -1,6 +1,7 @@
 package org.usfirst.frc.team4500.robot.subsystems;
 
 import org.usfirst.frc.team4500.robot.commands.LiftLowerCommand;
+import org.usfirst.frc.team4500.robot.commands.LiftSteadyCommand;
 
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -22,17 +23,22 @@ public class LiftSubsystem extends Subsystem {
 
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
-        //setDefaultCommand(new LiftLowerCommand());
+        setDefaultCommand(new LiftSteadyCommand());
     }
     
     public static void liftUp()
     {
-    	motorTalon.set(0.6);
+    	motorTalon.set(0.5);
     }
     
     public static void liftLower()
     {
     	motorTalon.set(-0.25);
+    }
+    
+    public static void liftSteady()
+    {
+    	motorTalon.set(0.05);
     }
     
 }
