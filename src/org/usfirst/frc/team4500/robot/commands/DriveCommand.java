@@ -12,7 +12,7 @@ public class DriveCommand extends Command {
 
     public DriveCommand() {
         // Use requires() here to declare subsystem dependencies
-        // eg. requires(chassis);
+        requires(Robot.talonSubsystem);
     }
 
     // Called just before this Command runs the first time

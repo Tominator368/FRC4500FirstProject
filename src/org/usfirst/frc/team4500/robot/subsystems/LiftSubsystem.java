@@ -14,7 +14,7 @@ public class LiftSubsystem extends Subsystem {
 	
 	public LiftSubsystem()
 	{
-		motorTalon = new Talon(15);
+		motorTalon = new Talon(4);
 	}
     
     // Put methods for controlling this subsystem

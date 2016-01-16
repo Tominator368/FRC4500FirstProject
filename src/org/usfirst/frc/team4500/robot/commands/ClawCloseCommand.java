@@ -1,5 +1,6 @@
 package org.usfirst.frc.team4500.robot.commands;
 
+import org.usfirst.frc.team4500.robot.Robot;
 import org.usfirst.frc.team4500.robot.subsystems.ClawSubsystem;
 
 import edu.wpi.first.wpilibj.command.Command;
@@ -12,6 +13,7 @@ public class ClawCloseCommand extends Command {
     public ClawCloseCommand() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
+    	requires(Robot.clawSubsystem);
     }
 
     // Called just before this Command runs the first time
