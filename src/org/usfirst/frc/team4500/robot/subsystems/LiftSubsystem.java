@@ -32,7 +32,7 @@ public class LiftSubsystem extends Subsystem {
     
     public static void liftLower()
     {
-    	motorTalon.set(0.4);
+    	motorTalon.set(-0.25);
     }
     
 }
