@@ -4,6 +4,7 @@ package org.usfirst.frc.team4500.robot;
 import org.usfirst.frc.team4500.robot.commands.ClawCloseCommand;
 import org.usfirst.frc.team4500.robot.commands.ClawOpenCommand;
 import org.usfirst.frc.team4500.robot.commands.ExampleCommand;
+import org.usfirst.frc.team4500.robot.commands.LiftLowerCommand;
 import org.usfirst.frc.team4500.robot.commands.LiftRiseCommand;
 import org.usfirst.frc.team4500.robot.subsystems.ClawSubsystem;
 import org.usfirst.frc.team4500.robot.subsystems.ExampleSubsystem;
@@ -113,6 +114,7 @@ public class Robot extends IterativeRobot {
         OI.clawOpen.whenPressed(new ClawOpenCommand());
         OI.clawClose.whenPressed(new ClawCloseCommand());
         OI.liftRise.whileHeld(new LiftRiseCommand());
+        OI.liftLower.whileHeld(new LiftLowerCommand());
     }
     
     /**

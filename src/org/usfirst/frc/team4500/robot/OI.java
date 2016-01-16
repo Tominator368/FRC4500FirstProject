@@ -42,7 +42,8 @@ public class OI {
 	public static Button move = new JoystickButton(stick, 2);
 	public static Button clawOpen = new JoystickButton(stick, 4);
 	public static Button clawClose = new JoystickButton(stick, 6);
-	public static Button liftRise = new JoystickButton(stick,5);
+	public static Button liftRise = new JoystickButton(stick, 5);
+	public static Button liftLower = new JoystickButton(stick, 3);
 	public static boolean finishedMove = false;
 	
 	public static double getJoystickX()

@@ -22,7 +22,7 @@ public class LiftSubsystem extends Subsystem {
 
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
-        setDefaultCommand(new LiftLowerCommand());
+        //setDefaultCommand(new LiftLowerCommand());
     }
     
     public static void liftUp()
@@ -32,7 +32,8 @@ public class LiftSubsystem extends Subsystem {
     
     public static void liftLower()
     {
-    	motorTalon.set(0.2);
+    	motorTalon.set(0.4);
     }
+    
 }
 
